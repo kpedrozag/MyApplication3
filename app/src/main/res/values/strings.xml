@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">My Application</string>
+    
+    <string name="source">Convertir desde</string>
+    <string name="destination">Convertir a</string>
+    <string name="to_convert">Numero a convertir</string>
+    <string name="binary">Binario</string>
+    <string name="octal">Octal</string>
+    <string name="hexa">Hexadecimal</string>
+    <string name="decimal">Decimal</string>
+    <string name="convert">Convertir</string>
+    <string name="details">Detalles</string>
+    <string name="result">Resultado:</string>
+    <string name="number">Numero</string>
+</resources>
