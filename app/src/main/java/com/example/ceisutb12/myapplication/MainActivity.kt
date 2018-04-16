@@ -32,26 +32,133 @@ class MainActivity : Activity() {
     {
         val texto1 = spinner1.selectedItem.toString()
         val texto2 = spinner2.selectedItem.toString()
-        if (texto1 == "Decimal"){
-            if (texto2 == "Binario")
+        var dec: Int
+        var valor = ""
+        when(texto1)
+        {
+            "Decimal" ->
             {
-                decToBin(v)
-            }
-            else{
-                if (texto2 == "Hexadecimal") {
-
-                    var valor = numero.text.toString().toInt()
-                    result.text = valor.toString(16)
-
-                }
-                else
+                when(texto2)
                 {
-                    if (texto2 == "Octal")
+                    "Binario" ->
                     {
-                        decToOct(v)
+                        // convertir decimal -> binario
+                        dec = Integer.parseInt(valor)
+                        valor = Integer.toBinaryString(dec)
+                        // ubicar valor como texto del resultado
+
                     }
-                    else{
-                        result.text = "Conversion no valida".toString()
+                    "Hexadecimal" ->
+                    {
+                        // convertir decimal a hexadecimal
+                        dec =  Integer.parseInt(valor)
+                        valor = Integer.toHexString(dec)
+                        // ubicar valor como texto del resultado
+                    }
+                    "Octal" ->
+                    {
+                        // convertir decimal a -> octal
+                        dec = Integer.parseInt(valor)
+                        valor = Integer.toOctalString(dec)
+                        // ubicar valor como texto del resultado
+                    }
+                    else ->
+                    {
+                        // escribir el mismo resultado
+                    }
+                }
+            }
+            "Binario" ->
+            {
+                when(texto2)
+                {
+                    "Decimal" ->
+                    {
+                        // convertir binario a decimal
+                        dec = Integer.parseInt(valor, 2)
+                        valor = dec.toString()
+                        // ubicar valor como texto del resultado
+                    }
+                    "Hexadecimal" ->
+                    {
+                        // convertir binario a hexadecimal
+                        dec = Integer.parseInt(valor, 2)
+                        valor = Integer.toHexString(dec)
+                        // ubicar valor como texto del resultado
+                    }
+                    "Octal" ->
+                    {
+                        // convertir binario a octal
+                        dec = Integer.parseInt(valor, 2)
+                        valor = Integer.toOctalString(dec)
+                        // ubicar valor como texto del resultado
+                    }
+                    else ->
+                    {
+                        // escribir el mismo resultado
+                    }
+                }
+            }
+            "Hexadecimal" ->
+            {
+                when(texto2)
+                {
+                    "Decimal" ->
+                    {
+                        // convertir hexadecimal a decimal
+                        dec = Integer.parseInt(valor, 16)
+                        valor = dec.toString()
+                        // ubicar valor como texto del resultado
+                    }
+                    "Binario" ->
+                    {
+                        // convertir hexadecimal a binario
+                        dec = Integer.parseInt(valor, 16)
+                        valor = Integer.toBinaryString(dec)
+                        // ubicar valor como texto del resultado
+                    }
+                    "Octal" ->
+                    {
+                        // convertir hexadecimal a octal
+                        dec = Integer.parseInt(valor, 16)
+                        valor = Integer.toOctalString(dec)
+                        // ubicar valor como texto del resultado
+                    }
+                    else ->
+                    {
+                        // escribir el mismo resultado
+                    }
+                }
+            }
+            "Octal" ->
+            {
+                when(texto2)
+                {
+                    "Decimal" ->
+                    {
+                        // convertir octal a decimal
+                        dec = Integer.parseInt(valor, 8)
+                        valor = dec.toString()
+                        // ubicar valor como texto del resultado
+                    }
+                    "Binario" ->
+                    {
+                        // convertir octal a binario
+                        dec = Integer.parseInt(valor, 8)
+                        valor = Integer.toBinaryString(dec)
+                        // ubicar valor como texto del resultado
+                    }
+                    "Hexadecimal" ->
+                    {
+                        // convertir octal a hexadecimal
+                        dec = Integer.parseInt(valor, 8)
+                        valor = Integer.toHexString(dec)
+                        // ubicar valor como texto del resultado
+                    }
+                    else ->
+                    {
+                        // escribir el mismo resultado
+                        // ubicar valor como texto del resultado
                     }
                 }
             }
