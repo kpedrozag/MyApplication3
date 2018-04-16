@@ -8,14 +8,16 @@
 
     <LinearLayout
         android:id="@+id/linear_arriba"
-        android:layout_width="383dp"
-        android:layout_height="276dp"
-        android:layout_marginBottom="4dp"
+        android:layout_width="0dp"
+        android:layout_height="272dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="1dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/linear_abajo"
+        app:layout_constraintBottom_toBottomOf="@+id/linear_abajo"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.00999999">
 
         <LinearLayout
             android:id="@+id/primer_linear"
@@ -34,7 +36,8 @@
                 android:id="@+id/spinner1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:entries="@array/sistemas" />
         </LinearLayout>
 
         <LinearLayout
@@ -54,7 +57,8 @@
                 android:id="@+id/spinner2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:entries="@array/sistemas" />
         </LinearLayout>
 
         <TextView
@@ -69,7 +73,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Numero" />
+            tools:hint="Numero" />
 
         <LinearLayout
             android:id="@+id/tercer_linear"
@@ -82,7 +86,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/convert" />
+                android:text="@string/convert"
+                android:onClick="selector"/>
 
             <Button
                 android:layout_width="wrap_content"
@@ -98,6 +103,7 @@
             android:text="@string/result" />
 
         <TextView
+            android:id="@+id/resuul"
             android:layout_width="match_parent"
             android:layout_height="34dp"
             android:text="@string/number" />
@@ -106,11 +112,21 @@
 
     <LinearLayout
         android:id="@+id/linear_abajo"
-        android:layout_width="match_parent"
-        android:layout_height="232dp"
+        android:layout_width="0dp"
+        android:layout_height="167dp"
+        android:layout_marginTop="8dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"></LinearLayout>
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/texto_api"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

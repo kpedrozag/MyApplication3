@@ -12,4 +12,11 @@
     <string name="details">Detalles</string>
     <string name="result">Resultado:</string>
     <string name="number">Numero</string>
+
+    <string-array name="sistemas">
+        <item>Binario</item>
+        <item>Hexadecimal</item>
+        <item>Octal</item>
+        <item>Decimal</item>
+    </string-array>
 </resources>
